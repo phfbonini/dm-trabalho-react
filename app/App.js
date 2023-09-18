@@ -16,6 +16,13 @@ const HomeStack = () => (
   <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Detalhes" component={Detalhes} />
+  </Stack.Navigator>
+);
+
+const ExtraStack = () => (
+  <Stack.Navigator>
+  <Stack.Screen name="Login" component={Login} />
+    <Stack.Screen name="Pagina Extra" component={PaginaExtra} />
     <Stack.Screen name="DetalhesAgente" component={DetalhesAgente} />
   </Stack.Navigator>
 );
@@ -25,7 +32,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeStack} />
-        <Tab.Screen name="Página Extra" component={PaginaExtra} />
+        <Tab.Screen name="Página Extra" component={ExtraStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );
