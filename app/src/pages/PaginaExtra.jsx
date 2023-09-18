@@ -8,7 +8,6 @@ const PaginaExtra = () => {
   const navigation = useNavigation();
 
   useEffect(() => {
-    // Fazer uma solicitação GET à API para obter dados dos agentes
     axios.get('https://valorant-api.com/v1/agents')
       .then((response) => {
         const agentData = response.data.data;
@@ -52,11 +51,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
+    color: '#333', // Cor do texto
   },
   agentItem: {
     flexDirection: 'row',
     alignItems: 'center',
     margin: 10,
+    backgroundColor: 'white', // Cor de fundo do item
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#007AFF', // Cor da borda
   },
   agentImage: {
     width: 50,
@@ -69,6 +74,7 @@ const styles = StyleSheet.create({
   agentName: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#007AFF', // Cor do nome do agente
   },
 });
 
