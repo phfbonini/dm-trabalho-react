@@ -22,20 +22,24 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#fff', // Cor de fundo da tela
   },
   agentImage: {
     width: 150,
     height: 150,
     marginBottom: 10,
+    borderRadius: 75, // Bordas arredondadas para a imagem
   },
   agentName: {
     fontSize: 24,
     fontWeight: 'bold',
+    color: '#007AFF', // Cor do nome do agente
   },
   agentDescription: {
     fontSize: 16,
     textAlign: 'center',
     margin: 10,
+    color: '#333', // Cor do texto da descrição
   },
 });
 

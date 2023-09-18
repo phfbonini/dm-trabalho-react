@@ -32,7 +32,8 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Home" component={HomeStack} />
-        <Tab.Screen name="Página Extra" component={ExtraStack} />
+        <Tab.Screen name="Página Extra" component={PaginaExtra} />
+        <Stack.Screen name="DetalhesAgente" component={DetalhesAgente} />
       </Tab.Navigator>
     </NavigationContainer>
   );
