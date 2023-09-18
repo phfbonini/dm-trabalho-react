@@ -5,12 +5,14 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/pages/Home';
 import Detalhes from './src/pages/Detalhes';
 import PaginaExtra from './src/pages/PaginaExtra';
+import DetalhesAgente from './src/pages/DetalhesAgente';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const HomeStack = () => (
   <Stack.Navigator>
+  <Stack.Screen name="Login" component={Login} />
     <Stack.Screen name="Home" component={Home} />
     <Stack.Screen name="Detalhes" component={Detalhes} />
   </Stack.Navigator>
