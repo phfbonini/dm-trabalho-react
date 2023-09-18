@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import Login from './components/Login'; // Certifique-se de que o caminho esteja correto
+import Login from './src/pages/Login'; // Certifique-se de que o caminho esteja correto
 
 const App = () => {
   return (
