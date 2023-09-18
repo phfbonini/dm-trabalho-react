@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const navigation = useNavigation();
 
   const handleLogin = () => {
     if (!email || !password) {
@@ -11,10 +14,13 @@ const Login = () => {
     } else {
       // Lógica de login fictícia aqui
       Alert.alert('Sucesso', 'Login realizado com sucesso!');
-      // Redirecionar para a página principal do aplicativo
-      // Substitua esta linha pelo código de navegação apropriado
+      
+      // Navegar para a página Home após o login bem-sucedido
+      console.log('Navegando para a página Home');
+      navigation.navigate('Home');
     }
   };
+  
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
